@@ -33,6 +33,7 @@
 .chapter {
     margin-top: 20px;
     margin-bottom: 15px;
+    font-size: 28px;
 }
 
 
@@ -46,9 +47,11 @@
     border-radius: 14px;
     justify-content: center;
     gap: 35px;
+    font-family: "Unbounded", sans-serif;
 }
 
 .option {
+    font-weight: 400;
     font-size: 20px;
     cursor: pointer;
     padding: 10px 20px;
@@ -110,7 +113,7 @@
 
 @media (max-width: 767px) {
     .product-name {
-        font-size: 27px;
+        font-size: 28px;
     }
 
     .product-name-icon {
@@ -124,7 +127,7 @@
     }
 
     .product-price {
-        @include price(red, 20px, underline);
+        @include price(red, 18px, underline);
     }
 
     .option {

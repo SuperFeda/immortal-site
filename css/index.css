@@ -23,7 +23,7 @@
   display: flex;
   flex-wrap: wrap;
   width: 100%;
-  background: rgba(27, 24, 24, 0.7);
+  background: rgba(var(--objects-color-rgb), 0.7);
   padding: 5px;
   margin-bottom: 15px;
   border-radius: 14px;
@@ -40,6 +40,10 @@
   border-radius: 14px;
   transition: var(--transition);
 }
+.option:active {
+  scale: 0.98 !important;
+  background: rgba(0, 0, 0, 0.5) !important;
+}
 .option:hover {
   background: orange;
 }
@@ -53,7 +57,7 @@
 
 .product {
   display: flex;
-  background: rgba(27, 24, 24, 0.7);
+  background: rgba(var(--objects-color-rgb), 0.7);
   border-radius: 14px;
   list-style-type: none;
   overflow: hidden;
@@ -61,6 +65,10 @@
   cursor: pointer;
   width: 49%;
   flex-grow: 1;
+}
+.product:active {
+  scale: 0.98 !important;
+  background: rgba(0, 0, 0, 0.5) !important;
 }
 .product:hover {
   scale: 1.02;

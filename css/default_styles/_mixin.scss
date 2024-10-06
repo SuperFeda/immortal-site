@@ -24,3 +24,9 @@
         content: "~ ";
     }
 }
+
+@mixin onPress() {
+    scale: 0.98 !important;
+    background: rgba(0, 0, 0, 0.5) !important;
+    //border: 1px solid var(--text-color) !important;
+}

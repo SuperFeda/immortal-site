@@ -24,7 +24,6 @@
 //}
 
 .bg-image {
-    //filter: blur(3px);
     border-radius: 20px;
     width: 100%;
 }
@@ -41,7 +40,7 @@
     display: flex;
     flex-wrap: wrap;
     width: 100%;
-    background: rgba(27, 24, 24, 0.7);
+    background: rgba(var(--objects-color-rgb), 0.7);
     padding: 5px;
     margin-bottom: 15px;
     border-radius: 14px;
@@ -58,6 +57,10 @@
     border-radius: 14px;
     transition: var(--transition);
 
+    &:active {
+        @include onPress;
+    }
+
     &:hover {
         background: orange;
     }
@@ -73,7 +76,7 @@
 
 .product {
     display: flex;
-    background: rgba(27, 24, 24, 0.7);
+    background: rgba(var(--objects-color-rgb), 0.7);
     border-radius: 14px;
     list-style-type: none;
     overflow: hidden;
@@ -81,6 +84,10 @@
     cursor: pointer;
     width: 49%;
     flex-grow: 1;
+
+    &:active {
+        @include onPress();
+    }
 
     &:hover {
         scale: 1.02;

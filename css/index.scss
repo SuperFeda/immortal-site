@@ -40,7 +40,8 @@
     display: flex;
     flex-wrap: wrap;
     width: 100%;
-    background: rgba(var(--objects-color-rgb), 0.7);
+    //background: rgba(var(--objects-color-rgb), 0.7);
+    background: linear-gradient(150deg, rgba(var(--brand-red-rgb), 0.7), rgba(var(--objects-color-rgb), 0.7), rgba(var(--brand-orange-rgb), 0.7));
     padding: 5px;
     margin-bottom: 15px;
     border-radius: 14px;
@@ -62,7 +63,7 @@
     }
 
     &:hover {
-        background: orange;
+        background: rgba(var(--brand-red-rgb), 0.8);
     }
 }
 
@@ -94,6 +95,18 @@
     }
 }
 
+.donat {
+    background: linear-gradient(145deg, rgba(var(--objects-color-rgb), 0.7) 70%, rgba(var(--brand-orange-rgb), 0.7) 20%);
+}
+
+.case {
+    background: linear-gradient(145deg, rgba(var(--objects-color-rgb), 0.7) 70%, rgba(var(--brand-pale-red-rgb), 0.7) 20%);
+}
+
+.spawner {
+    background: linear-gradient(145deg, rgba(var(--objects-color-rgb), 0.7) 70%, rgba(var(--brand-red-rgb), 0.7) 20%);
+}
+
 .product-info {
     padding: 10px;
 }
@@ -113,7 +126,7 @@
 }
 
 .product-price {
-    @include price;
+    @include price(rgb(var(--brand-orange-rgb)));
 }
 
 
@@ -134,7 +147,7 @@
     }
 
     .product-price {
-        @include price(red, 18px, underline);
+        @include price(rgb(var(--brand-orange-rgb)), 18px, underline);
     }
 
     .option {

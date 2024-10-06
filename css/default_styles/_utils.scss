@@ -1,27 +1,27 @@
 .button {
     padding: 8px 12px;
-    border: 2px solid white;
+    border: 3px solid rgb(var(--brand-red-rgb));
     background: transparent;
     border-radius: 12px;
     transition: var(--transition);
     outline: none;
 
     &:hover {
-        border: 2px solid rgba(200, 200, 200, 0.96);
+        border: 3px solid rgba(var(--brand-red-rgb), 0.75);
     }
 }
 
 .button_2 {
     padding: 8px 12px;
     border-radius: 12px;
-    background: white;
-    color: black !important;
+    background: rgb(var(--brand-orange-rgb));
     transition: var(--transition);
     outline: none;
     border: 1px solid transparent;
 
+
     &:hover {
-        background: rgba(200, 200, 200, 0.96);
+        background: rgba(var(--brand-orange-rgb), 0.75);
     }
 }
 

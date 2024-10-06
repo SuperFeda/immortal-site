@@ -95,8 +95,31 @@
 }
 
 @media (max-width: 767px) {
+  .product-name {
+    font-size: 27px;
+  }
+  .product-name-icon {
+    height: 17px !important;
+    width: 17px !important;
+    bottom: 2px !important;
+  }
   .chapter {
     font-size: 20px;
+  }
+  .product-price {
+    font-size: 20px;
+    font-family: "Unbounded", sans-serif;
+    font-weight: 500;
+    text-decoration: underline;
+    color: red;
+  }
+  .product-price::after {
+    content: " ₽";
+  }
+  .product-price.not-static::before {
+    font-family: "Nunito";
+    font-weight: 1000;
+    content: "~ ";
   }
   .option {
     font-size: 17px;

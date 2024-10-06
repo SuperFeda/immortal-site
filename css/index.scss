@@ -107,8 +107,22 @@
 
 
 @media (max-width: 767px) {
+    .product-name {
+        font-size: 27px;
+    }
+
+    .product-name-icon {
+        height: 17px !important;
+        width: 17px !important;
+        bottom: 2px !important;
+    }
+
     .chapter {
         font-size: 20px;
+    }
+
+    .product-price {
+        @include price(red, 20px, underline);
     }
 
     .option {

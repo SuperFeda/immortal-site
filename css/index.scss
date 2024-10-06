@@ -1,0 +1,124 @@
+@import url('https://fonts.googleapis.com/css2?family=Nunito&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Anton&family=Oswald&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Unbounded:wght@200..900&display=swap');
+
+@import "default_styles/mixin";
+
+
+.bg {
+    position: relative;
+}
+
+.title {
+    margin-top: 14%;
+    margin-left: 33%;
+    font-size: 40px;
+    font-family: "Unbounded", sans-serif;
+    font-weight: 500;
+    position: absolute;
+    z-index: 999;
+    background: rgba(0, 0, 0, 0.75);
+    padding: 10px 30px;
+    border-radius: 10px;
+    box-shadow: 0 0 20px black;
+}
+
+.bg-image {
+    //filter: blur(3px);
+    border-radius: 20px;
+    width: 100%;
+}
+
+
+.chapter {
+    margin-top: 20px;
+    margin-bottom: 15px;
+}
+
+
+.sort-panel {
+    display: flex;
+    flex-wrap: wrap;
+    width: 100%;
+    background: rgba(27, 24, 24, 0.7);
+    padding: 5px;
+    margin-bottom: 15px;
+    border-radius: 14px;
+    justify-content: center;
+    gap: 40px;
+}
+
+.option {
+    font-size: 20px;
+    cursor: pointer;
+    padding: 10px 15px;
+    border-radius: 14px;
+    transition: var(--transition);
+
+    &:hover {
+        background: orange;
+    }
+}
+
+
+.product-list {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(400px, 1fr));
+    gap: 15px;
+    margin-bottom: 20px;
+}
+
+.product {
+    display: flex;
+    background: rgba(27, 24, 24, 0.7);
+    //max-width: 400px;
+    border-radius: 14px;
+    list-style-type: none;
+    overflow: hidden;
+    transition: var(--transition);
+    cursor: pointer;
+
+    &:hover {
+        scale: 1.02;
+    }
+}
+
+.product-info {
+    padding: 10px;
+}
+
+.product-img {
+    padding-right: 10px;
+    //width: auto !important;
+}
+
+.product-name {
+    font-family: "Popins", sans-serif;
+    -webkit-text-fill-color: transparent;
+    -webkit-text-stroke: 1px #fff;
+    font-size: 34px;
+    word-break: break-word;
+    text-transform: uppercase;
+}
+
+.product-price {
+    @include price;
+}
+
+
+
+@media (max-width: 767px) {
+    .chapter {
+        font-size: 20px;
+    }
+
+    .option {
+        font-size: 17px;
+    }
+}
+
+@media (max-width: 660px) {
+    .sort-panel {
+        gap: 18px;
+    }
+}

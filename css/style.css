@@ -172,7 +172,7 @@ svg * {
 
 footer {
   padding: 30px 3% 30px;
-  background: #1b1818;
+  background: rgb(var(--objects-color-rgb));
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(200px, auto));
   gap: 2.2rem;
@@ -186,7 +186,6 @@ footer {
 }
 .footer-pillar .button:hover, .footer-pillar .button-tr:hover {
   transform: none;
-  color: white;
 }
 .footer-pillar li {
   margin-bottom: 6px;
@@ -197,6 +196,7 @@ footer {
 .footer-pillar li a {
   display: block;
   text-decoration: none;
+  transition: var(--transition);
 }
 .footer-pillar li a:hover {
   transform: translateY(-1px) translateX(-2px);
@@ -207,6 +207,18 @@ footer {
   top: 3px;
   left: 3px;
   position: relative;
+}
+
+#vk-btn:hover {
+  color: var(--vk-color);
+}
+
+#tg-btn:hover {
+  color: var(--telegram-color);
+}
+
+#yt-btn:hover {
+  color: var(--youtube-color);
 }
 
 @media (max-width: 300px) {
@@ -224,7 +236,7 @@ header {
   display: flex;
   align-items: center;
   justify-content: space-between;
-  background: rgba(27, 24, 24, 0.7);
+  background: rgba(var(--objects-color-rgb), 0.5);
   border-radius: 14px;
   padding: 12px 3%;
   transition: all 0.7s;
@@ -329,8 +341,12 @@ header {
   }
 }
 :root {
+  --telegram-color: #00aeed;
+  --vk-color: #0077ff;
+  --youtube-color: #ff0000;
   --text-color: white;
   --site-bg: #120e0f;
+  --objects-color-rgb: 27, 24, 24;
   --blur: 7px;
   --transition: all 0.5s;
 }

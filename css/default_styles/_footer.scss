@@ -14,10 +14,6 @@ footer {
         font-size: 20px;
     }
 
-    .button:hover, .button-tr:hover {
-        transform: none;
-    }
-
     li {
         margin-bottom: 6px;
         list-style-type: none;
@@ -26,9 +22,11 @@ footer {
     }
 
     li a {
+        padding: 5px 10px;
         display: block;
         text-decoration: none;
         transition: var(--transition);
+        border-radius: 10px;
 
         &:hover {
             transform: translateY(-1px) translateX(-2px);
@@ -44,16 +42,25 @@ footer {
     }
 }
 
+.copyright {
+    max-width: 200px;
+    font-size: 14px;
+}
+
 #vk-btn:hover {
-    color: var(--vk-color);
+    background: var(--vk-color);
 }
 
 #tg-btn:hover {
-    color: var(--telegram-color);
+    background: var(--telegram-color);
 }
 
 #yt-btn:hover {
-    color: var(--youtube-color);
+    background: var(--youtube-color);
+}
+
+#ds-btn:hover {
+    background: var(--discord-color);
 }
 
 @media (max-width: 767px) {

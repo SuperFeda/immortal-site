@@ -23,7 +23,7 @@
   display: flex;
   flex-wrap: wrap;
   width: 100%;
-  background: linear-gradient(150deg, rgba(var(--brand-red-rgb), 0.7), rgba(var(--objects-color-rgb), 0.7), rgba(var(--brand-orange-rgb), 0.7));
+  background: linear-gradient(150deg, rgba(var(--brand-red-rgb), 0.7), rgba(var(--objects-color-rgb), 0.7), rgba(var(--objects-color-rgb), 0.7), rgba(var(--brand-orange-rgb), 0.7));
   padding: 5px;
   margin-bottom: 15px;
   border-radius: 14px;
@@ -58,7 +58,7 @@
 .product {
   display: flex;
   background: rgba(var(--objects-color-rgb), 0.7);
-  border-radius: 14px;
+  border-radius: 15px;
   list-style-type: none;
   overflow: hidden;
   transition: var(--transition);
@@ -72,6 +72,9 @@
 }
 .product:hover {
   scale: 1.02;
+}
+.product.discount-product {
+  border: 2px solid rgb(var(--brand-red-rgb));
 }
 
 .donat {
@@ -103,17 +106,39 @@
   text-transform: uppercase;
 }
 
-.product-price {
+.discount-price {
+  display: flex;
+  gap: 9px;
+}
+
+.product-price, .new-price {
   font-size: 22px;
   font-family: "Unbounded", sans-serif;
   font-weight: 500;
   text-decoration: underline;
   color: rgb(var(--brand-orange-rgb));
 }
-.product-price::after {
+.product-price::after, .new-price::after {
   content: " ₽";
 }
-.product-price.not-static::before {
+.product-price.not-static::before, .new-price.not-static::before {
+  font-family: "Nunito";
+  font-weight: 1000;
+  content: "~ ";
+}
+
+.old-price {
+  font-size: 18px;
+  font-family: "Unbounded", sans-serif;
+  font-weight: 500;
+  text-decoration: line-through;
+  color: rgb(var(--brand-red-rgb));
+  margin-top: 3px;
+}
+.old-price::after {
+  content: " ₽";
+}
+.old-price.not-static::before {
   font-family: "Nunito";
   font-weight: 1000;
   content: "~ ";
@@ -131,17 +156,32 @@
   .chapter {
     font-size: 20px;
   }
-  .product-price {
+  .product-price, .new-price {
     font-size: 18px;
     font-family: "Unbounded", sans-serif;
     font-weight: 500;
     text-decoration: underline;
     color: rgb(var(--brand-orange-rgb));
   }
-  .product-price::after {
+  .product-price::after, .new-price::after {
     content: " ₽";
   }
-  .product-price.not-static::before {
+  .product-price.not-static::before, .new-price.not-static::before {
+    font-family: "Nunito";
+    font-weight: 1000;
+    content: "~ ";
+  }
+  .old-price {
+    font-size: 15px;
+    font-family: "Unbounded", sans-serif;
+    font-weight: 500;
+    text-decoration: line-through;
+    color: rgb(var(--brand-red-rgb));
+  }
+  .old-price::after {
+    content: " ₽";
+  }
+  .old-price.not-static::before {
     font-family: "Nunito";
     font-weight: 1000;
     content: "~ ";

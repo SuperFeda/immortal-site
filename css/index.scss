@@ -41,7 +41,13 @@
     flex-wrap: wrap;
     width: 100%;
     //background: rgba(var(--objects-color-rgb), 0.7);
-    background: linear-gradient(150deg, rgba(var(--brand-red-rgb), 0.7), rgba(var(--objects-color-rgb), 0.7), rgba(var(--brand-orange-rgb), 0.7));
+    background: linear-gradient(
+                    150deg,
+                    rgba(var(--brand-red-rgb), 0.7),
+                    rgba(var(--objects-color-rgb), 0.7),
+                    rgba(var(--objects-color-rgb), 0.7),
+                    rgba(var(--brand-orange-rgb), 0.7)
+    );
     padding: 5px;
     margin-bottom: 15px;
     border-radius: 14px;
@@ -78,7 +84,7 @@
 .product {
     display: flex;
     background: rgba(var(--objects-color-rgb), 0.7);
-    border-radius: 14px;
+    border-radius: 15px;
     list-style-type: none;
     overflow: hidden;
     transition: var(--transition);
@@ -92,6 +98,10 @@
 
     &:hover {
         scale: 1.02;
+    }
+
+    &.discount-product {
+        border: 2px solid rgb(var(--brand-red-rgb));
     }
 }
 
@@ -125,8 +135,19 @@
     text-transform: uppercase;
 }
 
-.product-price {
-    @include price(rgb(var(--brand-orange-rgb)));
+
+.discount-price {
+    display: flex;
+    gap: 9px;
+}
+
+.product-price, .new-price {
+    @include price();
+}
+
+.old-price {
+    @include price(rgb(var(--brand-red-rgb)), 18px, line-through);
+    margin-top: 3px;
 }
 
 
@@ -146,8 +167,12 @@
         font-size: 20px;
     }
 
-    .product-price {
+    .product-price, .new-price {
         @include price(rgb(var(--brand-orange-rgb)), 18px, underline);
+    }
+
+    .old-price {
+        @include price(rgb(var(--brand-red-rgb)), 15px, line-through);
     }
 
     .option {

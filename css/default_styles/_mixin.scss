@@ -9,8 +9,8 @@
 
 @mixin price($text-color: rgb(var(--brand-orange-rgb)), $font-size: 22px, $text-decor: underline) {
     font-size: $font-size;
-    font-family: "Unbounded", sans-serif;
-    font-weight: 500;
+    font-family: "Nunito"; // "Unbounded", sans-serif
+    font-weight: 1000;
     text-decoration: $text-decor;
     color: $text-color;
 

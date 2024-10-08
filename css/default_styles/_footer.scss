@@ -31,7 +31,7 @@ footer {
 
         &:hover {
             transform: translateY(-1px) translateX(-2px);
-            color: var(--skylight-blue);
+            background: rgba(var(--brand-red-rgb));
         }
     }
 
@@ -69,8 +69,5 @@ footer {
 }
 
 @media (max-width: 300px) {
-    #footer-img {
-        width: 96vw;
-        height: auto;
-    }
+
 }

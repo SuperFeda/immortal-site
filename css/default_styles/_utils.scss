@@ -1,4 +1,4 @@
-.button {
+.transparent_button {
     padding: 8px 12px !important;
     border: 2px solid rgb(var(--brand-red-rgb));
     background: transparent;
@@ -14,7 +14,7 @@
     }
 }
 
-.button_2 {
+.red_button {
     padding: 8px 12px !important;
     border: 2px solid rgb(var(--brand-red-rgb));
     background: rgba(var(--brand-red-rgb), 0.25);
@@ -31,7 +31,7 @@
     }
 }
 
-.button_3 {
+.orange_button {
     padding: 8px 12px !important;
     border-radius: 12px;
     background: rgb(var(--brand-orange-rgb));

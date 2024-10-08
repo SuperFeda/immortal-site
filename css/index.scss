@@ -92,7 +92,7 @@
     transition: all 0.7s;
     overflow: hidden;
 
-    & .button {
+    & .transparent_button {
         width: 90%;
         color: var(--text-color);
         margin-top: 7px;
@@ -202,3 +202,20 @@
         gap: 18px;
     }
 }
+
+@media (max-width: 575px) {
+    .product-name {
+        font-size: 23px;
+    }
+
+    .product-list {
+        grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+    }
+}
+
+@media (max-width: 453px) {
+    .product-list {
+        grid-template-columns: repeat(auto-fill, minmax(150px, 1fr));
+    }
+}
+

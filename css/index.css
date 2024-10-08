@@ -71,7 +71,8 @@
   color: var(--text-color);
   margin-top: 7px;
   margin-bottom: 12px;
-  margin-left: 14px;
+  margin-left: auto;
+  margin-right: auto;
 }
 .product:hover {
   border: 2px solid rgba(var(--brand-red-rgb), 0.8);
@@ -216,7 +217,37 @@
 }
 @media (max-width: 575px) {
   .product-name {
-    font-size: 23px;
+    font-size: 20px;
+  }
+  .product-price, .new-price {
+    font-size: 16px;
+    font-family: "Nunito";
+    font-weight: 1000;
+    text-decoration: underline;
+    color: rgb(var(--brand-orange-rgb));
+  }
+  .product-price::after, .new-price::after {
+    content: " ₽";
+  }
+  .product-price.not-static::before, .new-price.not-static::before {
+    font-family: "Nunito";
+    font-weight: 1000;
+    content: "~ ";
+  }
+  .old-price {
+    font-size: 13px;
+    font-family: "Nunito";
+    font-weight: 1000;
+    text-decoration: line-through;
+    color: rgb(var(--brand-red-rgb));
+  }
+  .old-price::after {
+    content: " ₽";
+  }
+  .old-price.not-static::before {
+    font-family: "Nunito";
+    font-weight: 1000;
+    content: "~ ";
   }
   .product-list {
     grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));

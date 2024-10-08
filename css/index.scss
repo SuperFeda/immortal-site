@@ -97,7 +97,8 @@
         color: var(--text-color);
         margin-top: 7px;
         margin-bottom: 12px;
-        margin-left: 14px;
+        margin-left: auto;
+        margin-right: auto;
     }
 
     &:hover {
@@ -205,7 +206,15 @@
 
 @media (max-width: 575px) {
     .product-name {
-        font-size: 23px;
+        font-size: 20px;
+    }
+
+    .product-price, .new-price {
+        @include price(rgb(var(--brand-orange-rgb)), 16px, underline);
+    }
+
+    .old-price {
+        @include price(rgb(var(--brand-red-rgb)), 13px, line-through);
     }
 
     .product-list {
